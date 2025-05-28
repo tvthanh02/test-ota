@@ -24,6 +24,7 @@ export default function App() {
     <View style={styles.container}>
       <Text>Halooooooo!, Vietnamese</Text>
       <Text>Thành</Text>
+      <Text>Triệu</Text>
       <StatusBar style="auto" />
     </View>
   );
