@@ -23,9 +23,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Halooooooo!, Vietnamese</Text>
-      <Text>Update OTA 1!!!</Text>
-      <Text>VNNNNNNNNNNNNNN</Text>
-      <Text>VNNNNNNNNNNNNNN</Text>
+      <Text>Update OTA</Text>
       <StatusBar style="auto" />
     </View>
   );
