@@ -8,10 +8,8 @@ import { useEffect } from 'react';
 const checkUpdate = async () => {
   const update = await Updates.checkForUpdateAsync();
   if (update.isAvailable) {
-    const isConfirm = confirm("có bản cập nhật mới!");
-    if (!isConfirm) return;
     await Updates.fetchUpdateAsync();
-    await Updates.reloadAsync(); // Khởi động lại app để dùng bundle mới
+    await Updates.reloadAsync();
   }
 };
 
