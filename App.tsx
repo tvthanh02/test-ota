@@ -8,6 +8,8 @@ import { useEffect } from 'react';
 const checkUpdate = async () => {
   const update = await Updates.checkForUpdateAsync();
   if (update.isAvailable) {
+    const isConfirm = confirm("có bản cập nhật mới!");
+    if (!isConfirm) return;
     await Updates.fetchUpdateAsync();
     await Updates.reloadAsync(); // Khởi động lại app để dùng bundle mới
   }
@@ -23,7 +25,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Halooooooo!, Vietnamese</Text>
-      <Text>Update OTA!!!</Text>
+      <Text>Update OTA 1!!!</Text>
       <StatusBar style="auto" />
     </View>
   );
