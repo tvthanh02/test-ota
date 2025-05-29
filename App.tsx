@@ -26,6 +26,7 @@ export default function App() {
     <View style={styles.container}>
       <Text>Halooooooo!, Vietnamese</Text>
       <Text>Update OTA 1!!!</Text>
+      <Text>VNNNNNNNNNNNNNN</Text>
       <StatusBar style="auto" />
     </View>
   );
