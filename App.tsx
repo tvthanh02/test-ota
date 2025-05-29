@@ -23,8 +23,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Halooooooo!, Vietnamese</Text>
-      <Text>Thành</Text>
-      <Text>Triệu</Text>
+      <Text>Update OTA!!!</Text>
       <StatusBar style="auto" />
     </View>
   );
