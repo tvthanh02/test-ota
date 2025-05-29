@@ -25,6 +25,7 @@ export default function App() {
       <Text>Halooooooo!, Vietnamese</Text>
       <Text>Update OTA 1!!!</Text>
       <Text>VNNNNNNNNNNNNNN</Text>
+      <Text>VNNNNNNNNNNNNNN</Text>
       <StatusBar style="auto" />
     </View>
   );
