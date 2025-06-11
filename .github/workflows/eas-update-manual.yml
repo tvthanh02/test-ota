@@ -1,0 +1,45 @@
+name: Manual EAS OTA Update
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Tên nhánh cập nhật OTA (VD: main, develop)'
+        required: true
+        default: 'develop'
+      message:
+        description: 'Message cho bản OTA update'
+        required: true
+        default: 'OTA update'
+      rollout:
+        description: 'Rollout'
+        required: true
+        default: 100
+
+jobs:
+  eas-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install EAS CLI
+        run: npm install -g eas-cli
+
+      - name: Run EAS Update
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          eas update \
+            --branch "${{ github.event.inputs.branch }}" \
+            --message "${{ github.event.inputs.message }}" \
+            --rollout-percentage=${{ github.event.inputs.description }} \
+            --non-interactive
