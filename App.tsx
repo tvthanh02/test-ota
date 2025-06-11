@@ -22,7 +22,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Halooooooo!, Vietnamese</Text>
+      <Text>Halooooooo!, Vietnamese 121415616</Text>
       <Text>Update OTA</Text>
       <StatusBar style="auto" />
     </View>
