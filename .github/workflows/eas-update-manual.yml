@@ -41,5 +41,5 @@ jobs:
           eas update \
             --branch "${{ github.event.inputs.branch }}" \
             --message "${{ github.event.inputs.message }}" \
-            --rollout-percentage=${{ github.event.inputs.description }} \
+            --rollout-percentage=${{ github.event.inputs.rollout }} \
             --non-interactive
